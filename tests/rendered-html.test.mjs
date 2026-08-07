@@ -82,6 +82,8 @@ test("exports a complete noindex GitHub Pages build", async () => {
   assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
   assert.match(html, /meta name="robots" content="noindex, nofollow, noarchive"/);
   assert.doesNotMatch(html, /<video|\.mp4/i);
+  assert.doesNotMatch(html, /(?:href|src)="\/(?:_next|downloads|catalogue)/);
+  assert.doesNotMatch(html, /\\"href\\":\\"\/downloads\//);
   assert.equal(
     (await readFile(new URL("../docs/CNAME", import.meta.url), "utf8")).trim(),
     "www.deliriumdownloads.com",

@@ -31,9 +31,13 @@ if (!response.ok) {
   throw new Error(`Static render failed with ${response.status}`);
 }
 
-const html = await response.text();
+const html = (await response.text()).replaceAll("/_next/", "./_next/");
 if (!html.includes("Delirium resources,") || !html.includes("resource-card")) {
   throw new Error("Static render did not contain the expected resource catalogue");
+}
+
+if (/(?:href|src)="\/(?:_next|downloads|catalogue)/.test(html)) {
+  throw new Error("Static export contains a root-relative asset or download path");
 }
 
 await writeFile(path.join(outputDir, "index.html"), html, "utf8");

@@ -142,22 +142,22 @@ export default function Home() {
                 <li>
                   <span>01</span>
                   <div><strong>Recognise the pattern</strong><p>Baseline, acute change, fluctuation, attention and arousal.</p></div>
-                  <a href="/downloads/recognising-delirium-at-the-bedside.pdf" download aria-label="Download Recognising delirium at the bedside">PDF ↓</a>
+                  <a href="./downloads/recognising-delirium-at-the-bedside.pdf" download aria-label="Download Recognising delirium at the bedside">PDF ↓</a>
                 </li>
                 <li>
                   <span>02</span>
                   <div><strong>Use the 4AT properly</strong><p>Screening supports assessment; it does not replace diagnosis.</p></div>
-                  <a href="/downloads/positive-4at-next-steps.pdf" download aria-label="Download A positive 4AT: what happens next">PDF ↓</a>
+                  <a href="./downloads/positive-4at-next-steps.pdf" download aria-label="Download A positive 4AT: what happens next">PDF ↓</a>
                 </li>
                 <li>
                   <span>03</span>
                   <div><strong>Search for causes</strong><p>Look for urgent threats and interacting contributors.</p></div>
-                  <a href="/downloads/structured-cause-sweep.pdf" download aria-label="Download structured cause sweep">PDF ↓</a>
+                  <a href="./downloads/structured-cause-sweep.pdf" download aria-label="Download structured cause sweep">PDF ↓</a>
                 </li>
                 <li>
                   <span>04</span>
                   <div><strong>Build the treatment plan</strong><p>Treat causes while supporting physiology, function and distress.</p></div>
-                  <a href="/downloads/multidomain-treatment.pdf" download aria-label="Download multidomain treatment of delirium">PDF ↓</a>
+                  <a href="./downloads/multidomain-treatment.pdf" download aria-label="Download multidomain treatment of delirium">PDF ↓</a>
                 </li>
               </ol>
               <details className="student-case">
@@ -220,13 +220,13 @@ export default function Home() {
                   <h3>{resource.title}</h3>
                   <p className="resource-description">{resource.description}</p>
                   <div className="resource-actions">
-                    <a href={`/downloads/${resource.slug}.pdf`} target="_blank" rel="noreferrer" aria-label={`View ${resource.title} as PDF in a new tab`}>
+                    <a href={`./downloads/${resource.slug}.pdf`} target="_blank" rel="noreferrer" aria-label={`View ${resource.title} as PDF in a new tab`}>
                       View PDF <span aria-hidden="true">↗</span>
                     </a>
-                    <a href={`/downloads/${resource.slug}.pdf`} download aria-label={`Download ${resource.title} as PDF`}>
+                    <a href={`./downloads/${resource.slug}.pdf`} download aria-label={`Download ${resource.title} as PDF`}>
                       PDF <span aria-hidden="true">↓</span>
                     </a>
-                    <a href={`/downloads/${resource.slug}.docx`} download aria-label={`Download editable ${resource.title} Word template`}>
+                    <a href={`./downloads/${resource.slug}.docx`} download aria-label={`Download editable ${resource.title} Word template`}>
                       Word <span aria-hidden="true">↓</span>
                     </a>
                   </div>
@@ -336,7 +336,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <script src="/catalogue.js" defer />
+      <script src="./catalogue.js" defer />
     </>
   );
 }
