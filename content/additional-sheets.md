@@ -38,7 +38,7 @@
 
 ### Review the whole plan
 
-- Record the current formulation, actions, response, remaining uncertainty and escalation plan. Reassess if the person deteriorates or does not improve as expected.
+- Record the current formulation, actions, response, remaining uncertainty and escalation plan. Give every open clinical or supportive-care action a named owner and next review time. Reassess if the person deteriorates or does not improve as expected.
 - Share the diagnosis and plan with the person, family or carers and the multidisciplinary team in understandable language.
 - Monitor recovery. If delirium persists, re-evaluate possible causes and arrange appropriate follow-up.
 
@@ -135,8 +135,8 @@
 ### Haloperidol safety checks
 
 - Do not use haloperidol in Parkinson's disease or dementia with Lewy bodies. Check other contraindications and interactions in current product information.
-- Before starting in an older person, the MHRA recommends a baseline ECG and correction of electrolyte disturbances. Assess QT risk and the need for further ECG and electrolyte monitoring individually.
-- If haloperidol is used, prescribe the lowest clinically appropriate dose for the shortest possible time. Monitor for cardiac effects, orthostatic hypotension and extrapyramidal effects, including swallowing difficulty.
+- Before starting in an older person, the MHRA recommends a baseline ECG and correction of electrolyte disturbances. Assess QT risk. During treatment, repeat cardiac and electrolyte monitoring; individualise the frequency of further ECGs.
+- If haloperidol is used, prescribe the lowest clinically appropriate dose for the shortest possible time. Monitor blood pressure and check for cardiac effects, orthostatic hypotension and extrapyramidal effects, including swallowing difficulty.
 
 > **Safety box - this sheet contains no regimen:** It does not authorise a medicine, dose or route. Check current local and national prescribing guidance, the formulary and product information for the individual person. Haloperidol is contraindicated in Parkinson's disease and dementia with Lewy bodies; QT-related contraindications and interacting medicines also require specific review. Make an explicit stop or early-review plan.
 

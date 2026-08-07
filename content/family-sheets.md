@@ -133,7 +133,7 @@ This list is not complete. The right investigations depend on the person's sympt
 
 ## 4. How delirium is treated
 
-**Purpose:** To describe the multi-domain approach used to treat causes, support the person and reduce further stress on the brain.
+**Purpose:** To describe the combined approach used to treat causes, support the person and reduce further stress on the brain.
 
 **Status:** Draft for human clinical review. Not yet approved for publication.
 
@@ -155,7 +155,7 @@ Depending on the assessment, care may include treating an illness, correcting lo
 
 ### Reduce confusion and distress
 
-Staff and family can explain where the person is and what is happening, using calm and simple language. A clock, calendar and familiar objects may help. If the person is distressed or at risk, calm verbal and non-verbal approaches should be tried first. Decisions about medicines require individual clinical assessment.
+Staff and family can explain where the person is and what is happening, using calm and simple language. A clock, calendar and familiar objects may help. If the person is distressed or at risk, staff should first try calm reassurance, simple choices, reducing noise and giving the person space. Decisions about medicines require individual clinical assessment.
 
 ### Questions families can ask
 
@@ -383,7 +383,7 @@ If the person wants to talk, listen without forcing them to remember. Acknowledg
 
 ### When to ask for help
 
-Contact the GP or relevant healthcare team about continuing or worsening concerns that are not sudden. Ask who will review cognition, mood, sleep, mobility or daily function if these remain affected.
+Contact the GP or relevant healthcare team about continuing or worsening concerns that are not sudden. Ask who will review thinking and memory, mood, sleep, mobility or daily function if these remain affected.
 
 > **Urgent action**
 >
@@ -424,11 +424,11 @@ Delirium can cause hallucinations, such as seeing or hearing something that is n
 
 ### Tell the clinical team
 
-Describe what the person is seeing, hearing or believing; when it began; what seems to worsen or ease it; and whether anyone is at risk. The team should look for and manage possible causes. Calm verbal and non-verbal de-escalation should come first. Any decision about medicine requires individual clinical assessment.
+Describe what the person is seeing, hearing or believing; when it began; what seems to worsen or ease it; and whether anyone is at risk. The team should look for and manage possible causes. Calm reassurance, simple language, giving space and reducing stimulation should come first. Any decision about medicine requires individual clinical assessment.
 
 > **Urgent action**
 >
-> If hallucinations or frightening beliefs begin with sudden confusion at home, in the UK call 999 or go to A&E now and do not drive yourself. In hospital or a care home, tell staff immediately, especially if the person is very distressed, less responsive, at risk of harm or interfering with essential care. Outside the UK, call your local emergency number or use your local emergency service.
+> If hallucinations or frightening beliefs begin with sudden confusion at home, in the UK call 999 or go to A&E now and do not drive yourself. In hospital or a care home, tell staff immediately, especially if the person is very distressed, less responsive, at risk of harm or essential care cannot be provided safely. Outside the UK, call your local emergency number or use your local emergency service.
 
 ### Verified sources
 

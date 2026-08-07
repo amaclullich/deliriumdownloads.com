@@ -8,13 +8,19 @@
   const form = document.querySelector("#resource-search-form");
   let activeFilter = "all";
 
+  const normaliseSearch = (value) => value
+    .toLowerCase()
+    .replace(/\b(prevention|preventing|preventive)\b/g, "prevent")
+    .replace(/\bstudents?\b/g, "student");
+
   const update = () => {
-    const query = search.value.trim().toLowerCase();
+    const query = normaliseSearch(search.value.trim());
     let visible = 0;
     cards.forEach((card) => {
       const audiences = card.dataset.audience.split(/\s+/);
       const audienceMatch = activeFilter === "all" || audiences.includes(activeFilter);
-      const searchMatch = !query || card.dataset.search.includes(query);
+      const searchableText = normaliseSearch(`${card.dataset.search} ${card.dataset.audience}`);
+      const searchMatch = !query || searchableText.includes(query);
       const show = audienceMatch && searchMatch;
       card.hidden = !show;
       if (show) visible += 1;
@@ -54,7 +60,10 @@
     link.addEventListener("click", () => {
       const target = link.dataset.setFilter;
       const button = buttons.find((item) => item.dataset.filter === target);
-      if (button) button.click();
+      if (button) {
+        search.value = "";
+        button.click();
+      }
     });
   });
 

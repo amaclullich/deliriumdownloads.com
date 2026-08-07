@@ -63,12 +63,18 @@ test("ships every listed PDF, paired Word template and the public metadata files
 
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
   const catalogue = await readFile(new URL("../app/catalogue.ts", import.meta.url), "utf8");
+  const catalogueScript = await readFile(new URL("../public/catalogue.js", import.meta.url), "utf8");
+  const globalCss = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   for (const pdf of pdfs) {
     const slug = pdf.replace(/\.pdf$/, "");
     assert.match(`${page}\n${catalogue}`, new RegExp(slug.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   const robots = await readFile(new URL("../public/robots.txt", import.meta.url), "utf8");
   assert.match(robots, /Disallow:\s*\//);
+  assert.match(catalogue, /slug: "after-delirium"[\s\S]*?audience: "families"/);
+  assert.match(catalogueScript, /card\.dataset\.search.*card\.dataset\.audience/);
+  assert.match(catalogueScript, /search\.value = "";\s*button\.click\(\)/);
+  assert.doesNotMatch(globalCss, /site-header nav a:nth-child/);
 });
 
 test("does not retain disposable starter UI", async () => {

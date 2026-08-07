@@ -262,7 +262,7 @@
 - Share an agreed approach across the team so the person does not face repeated conflicting responses.
 - Arrange clinical review if distress persists, recurs or compromises safe care.
 
-> **Safety box — medication is not the first response to a solvable need:** Non-drug de-escalation and treatment of causes should be tried first where possible. Any medication or restrictive-intervention decision requires an appropriately authorised clinician, an individual risk–benefit assessment, the least restrictive approach and current law, guidance and local policy. If haloperidol is considered for an older person, apply the current MHRA cautions and contraindications, including relevant cardiac, electrolyte, neurological and medicine review. Use the emergency response if there is immediate danger or severe clinical deterioration.
+> **Safety box — medication is not the first response to a solvable need:** Non-drug de-escalation and treatment of causes should be tried first where possible. A medicine decision requires an appropriately qualified prescriber and an individual risk–benefit assessment. Any restrictive practice must be necessary, proportionate, lawful, time-limited and documented; address capacity, consent or best-interests requirements under applicable law and policy, review continuously and stop at the earliest opportunity. If haloperidol is considered for an older person, apply current MHRA cautions and contraindications. Use the emergency response for immediate danger or severe clinical deterioration.
 
 ### Verified official sources
 
@@ -350,7 +350,7 @@
 ### 4. Medicines and follow-up
 
 - Explain relevant medicines started, stopped or changed, why, and who will review them.
-- Specify follow-up for persistent symptoms, unresolved causes, distressing memories or functional recovery. Name the responsible person or service and the intended timeframe wherever these are known.
+- Specify follow-up for persistent symptoms, unresolved causes, distressing memories or functional recovery. Name the receiving person or service and review timeframe. If these cannot yet be confirmed, name who will secure them and by when.
 - If cognitive impairment remains, arrange appropriate later review rather than assuming it is dementia.
 
 ### 5. Communication and safety-netting

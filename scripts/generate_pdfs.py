@@ -378,10 +378,10 @@ class SheetDocTemplate(BaseDocTemplate):
         canvas.setFillColor(NAVY)
         canvas.rect(16 * mm, height - 14 * mm, width - 32 * mm, 1.1, fill=1, stroke=0)
         canvas.setFillColor(self.accent)
-        canvas.roundRect(16 * mm, height - 25 * mm, 42 * mm, 7.5 * mm, 1.5 * mm, fill=1, stroke=0)
+        canvas.roundRect(16 * mm, height - 23 * mm, 42 * mm, 7.5 * mm, 1.5 * mm, fill=1, stroke=0)
         canvas.setFillColor(NAVY)
         canvas.setFont("Arial-Bold", 7.2)
-        canvas.drawString(19 * mm, height - 22.4 * mm, self.sheet.audience.upper())
+        canvas.drawString(19 * mm, height - 20.4 * mm, self.sheet.audience.upper())
 
         canvas.setFillColor(NAVY)
         icon_x = width - 29 * mm
@@ -530,8 +530,8 @@ def draw_topic_icon(canvas, cx: float, cy: float, size: float, name: str, colour
 
 def build_styles(kind: str) -> dict[str, ParagraphStyle]:
     sample = getSampleStyleSheet()
-    body_size = 11.0 if kind == "family" else 9.15
-    leading = 13.6 if kind == "family" else 11.05
+    body_size = 12.0 if kind == "family" else 9.15
+    leading = 14.4 if kind == "family" else 11.05
     return {
         "body": ParagraphStyle(
             "body",
@@ -577,16 +577,16 @@ def build_styles(kind: str) -> dict[str, ParagraphStyle]:
         "sources": ParagraphStyle(
             "sources",
             fontName="Arial",
-            fontSize=7.4 if kind == "family" else 7.15,
-            leading=8.8 if kind == "family" else 8.55,
+            fontSize=8.0 if kind == "family" else 7.15,
+            leading=9.4 if kind == "family" else 8.55,
             textColor=NAVY_SOFT,
             spaceAfter=1,
         ),
         "note": ParagraphStyle(
             "note",
             fontName="Arial",
-            fontSize=7.1 if kind == "family" else 6.95,
-            leading=8.5 if kind == "family" else 8.35,
+            fontSize=7.8 if kind == "family" else 6.95,
+            leading=9.2 if kind == "family" else 8.35,
             textColor=NAVY_SOFT,
         ),
     }

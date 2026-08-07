@@ -182,7 +182,7 @@ def add_page_number(paragraph) -> None:
 
 
 def configure_styles(document: Document, kind: str) -> None:
-    body_size = 11 if kind == "family" else 10.75
+    body_size = 12 if kind == "family" else 10.75
     normal = document.styles["Normal"]
     normal.font.name = "Arial"
     normal._element.rPr.rFonts.set(qn("w:ascii"), "Arial")

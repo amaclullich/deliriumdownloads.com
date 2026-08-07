@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RENDER_ROOT = ROOT / "tmp" / "docx-renders-final"
+RENDER_ROOT = ROOT / "tmp" / "docx-renders-12pt"
 OUTPUT_ROOT = ROOT / "tmp" / "docx-contact-sheets"
 PAGES_PER_SHEET = 16
 COLS = 4

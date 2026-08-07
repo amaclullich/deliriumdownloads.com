@@ -16,6 +16,13 @@ adaptation. People seeking personal or family information are directed to
 Version 0.9 is a preview collection. Every clinical PDF is explicitly marked as
 awaiting final named human clinical review before use in patient care.
 
+The simulated item-by-item panel findings are recorded in
+[`content/resource-review-matrix.md`](content/resource-review-matrix.md). The
+patient/family PDFs use 12-point body text, and every paired Word alternative
+uses semantic headings and passed the document accessibility audit. The PDFs
+are not yet PDF/UA tagged; consider tagged PDFs or equivalent accessible HTML
+before full public release.
+
 ## Local commands
 
 ```bash

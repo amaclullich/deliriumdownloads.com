@@ -49,8 +49,18 @@ Changes made after that review included:
   cautions;
 - explicit 4AT-development interest disclosure and correction route;
 - paired Word local-adaptation templates with prominent approval fields;
+- four final clinical revisions covering restrictive-practice safeguards,
+  discharge ownership, named action/review responsibility and MHRA-aligned
+  monitoring wording;
+- corrected search synonyms, patient/family filtering, student-set reset
+  behaviour and full mobile navigation;
+- 12-point patient/family PDF and Word body text, plus corrected title-tab
+  spacing and plainer patient-facing language;
 - a visible preview banner, `noindex`, `nofollow`, `noarchive` and a site-wide
   `robots.txt` block pending named human approval.
+
+The item-by-item decisions and changes are recorded in
+`content/resource-review-matrix.md`.
 
 ## Visual-material decision
 
@@ -80,6 +90,9 @@ AI hospital scenes and unverified/cropped 4AT graphics were excluded.
 - The in-app browser could not provide a final screenshot because its
   admin-enforced security policy could not be verified. That control was not
   bypassed. Static HTTP responses and document assets were verified directly.
+- PDFs are not yet PDF/UA tagged. The paired Word files are the current
+  semantically structured, editable alternatives; tagged PDFs or equivalent
+  accessible HTML remain a consideration for full public release.
 
 ## Human publication gate
 

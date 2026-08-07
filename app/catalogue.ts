@@ -101,7 +101,7 @@ export const resources: Resource[] = [
     slug: "after-delirium",
     title: "After delirium",
     description: "A take-home handout on recovery, what to record and when to seek further advice.",
-    audience: "patients",
+    audience: "families",
     audienceLabel: "Patient & family handout",
     pages: 1,
     tone: "blue",
