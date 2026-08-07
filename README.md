@@ -3,6 +3,8 @@
 Static, staff-focused resource library for `deliriumdownloads.com`, prepared for
 GitHub Pages.
 
+Preview: <https://amaclullich.github.io/deliriumdownloads.com/>
+
 The site provides 25 printable delirium clinical prompts, teaching resources,
 service-improvement tools, and patient/family handouts for staff to use in
 conversation. Every PDF has a paired editable Word template for reviewed local
@@ -27,6 +29,10 @@ npm test
 Master copy is under `content/`; generation and visual-QA helpers are under
 `scripts/`. PDFs and Word templates are mirrored to `public/downloads/`. The
 complete GitHub Pages build is generated in `docs/`.
+
+The GitHub Actions deployment is enabled and verified. The custom domain is not
+connected until its registrar DNS is changed from the Porkbun parking records;
+keep the GitHub preview URL as the working review address until then.
 
 ## Publication gate
 

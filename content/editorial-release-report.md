@@ -71,6 +71,12 @@ AI hospital scenes and unverified/cropped 4AT graphics were excluded.
 - The static export contains all 25 PDF/Word pairs, the current stylesheet,
   search/filter script, custom-domain file and `.nojekyll` marker.
 - Build, lint and automated catalogue/download tests pass.
+- The GitHub Pages deployment passed on commit `4026f25`; the live preview,
+  stylesheet and catalogue script return HTTP 200, and all 25 PDF plus all 25
+  Word download routes were checked successfully.
+- `www.deliriumdownloads.com` still resolves to Porkbun parking records. The
+  working review address is therefore the GitHub Pages project URL until the
+  registrar DNS is changed and the custom domain is added in GitHub Pages.
 - The in-app browser could not provide a final screenshot because its
   admin-enforced security policy could not be verified. That control was not
   bypassed. Static HTTP responses and document assets were verified directly.
