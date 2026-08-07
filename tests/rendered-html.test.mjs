@@ -1,0 +1,94 @@
+import assert from "node:assert/strict";
+import { access, readFile, readdir } from "node:fs/promises";
+import test from "node:test";
+
+async function render() {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  return worker.fetch(
+    new Request("https://www.deliriumdownloads.com/", { headers: { accept: "text/html" } }),
+    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+}
+
+test("renders the complete staff-focused resource desk", async () => {
+  const response = await render();
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+  const html = await response.text();
+
+  assert.match(html, /Delirium Downloads \| Practical resources for health and care staff/);
+  assert.match(html, /For health, care and teaching staff/);
+  assert.match(html, /This library is designed for staff/);
+  assert.match(html, /Medical students · start here/);
+  assert.match(html, /Hypoactive delirium: the quiet change/);
+  assert.match(html, /editable Word alternatives/i);
+  assert.match(html, /https:\/\/www\.deliriumsupport\.com\//);
+  assert.match(html, /HUMAN CLINICAL REVIEW PENDING|human clinical release review is required/i);
+  assert.match(html, /noindex/i);
+  assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
+  assert.ok(
+    html.indexOf("Recognising delirium at the bedside") < html.indexOf("What is delirium?"),
+    "staff resources should appear before patient and family handouts",
+  );
+  assert.doesNotMatch(html, /video modules|<video|\.mp4/i);
+  assert.doesNotMatch(html, /react-loading-skeleton|codex-preview|Your site is taking shape/);
+});
+
+test("ships every listed PDF, paired Word template and the public metadata files", async () => {
+  const downloads = new URL("../public/downloads/", import.meta.url);
+  const pdfs = (await readdir(downloads)).filter((name) => name.endsWith(".pdf"));
+  const docs = (await readdir(downloads)).filter((name) => name.endsWith(".docx"));
+  assert.equal(pdfs.length, 25);
+  assert.equal(docs.length, 25);
+  for (const name of pdfs) {
+    const bytes = await readFile(new URL(name, downloads));
+    assert.ok(bytes.length > 10_000, `${name} should be a substantive PDF`);
+    assert.equal(bytes.subarray(0, 4).toString(), "%PDF");
+  }
+  for (const name of docs) {
+    const bytes = await readFile(new URL(name, downloads));
+    assert.ok(bytes.length > 15_000, `${name} should be a substantive Word template`);
+    assert.equal(bytes.subarray(0, 2).toString(), "PK");
+    assert.ok(pdfs.includes(name.replace(/\.docx$/, ".pdf")), `${name} should have a matching PDF`);
+  }
+  await Promise.all([
+    access(new URL("../public/robots.txt", import.meta.url)),
+    access(new URL("../public/sitemap.xml", import.meta.url)),
+    access(new URL("../public/og-delirium-downloads.png", import.meta.url)),
+    access(new URL("../public/catalogue.js", import.meta.url)),
+  ]);
+
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const catalogue = await readFile(new URL("../app/catalogue.ts", import.meta.url), "utf8");
+  for (const pdf of pdfs) {
+    const slug = pdf.replace(/\.pdf$/, "");
+    assert.match(`${page}\n${catalogue}`, new RegExp(slug.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+  const robots = await readFile(new URL("../public/robots.txt", import.meta.url), "utf8");
+  assert.match(robots, /Disallow:\s*\//);
+});
+
+test("does not retain disposable starter UI", async () => {
+  await assert.rejects(access(new URL("../app/_sites-preview/", import.meta.url)));
+  const packageJson = await readFile(new URL("../package.json", import.meta.url), "utf8");
+  assert.doesNotMatch(packageJson, /react-loading-skeleton/);
+});
+
+test("exports a complete noindex GitHub Pages build", async () => {
+  const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
+  assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
+  assert.match(html, /meta name="robots" content="noindex, nofollow, noarchive"/);
+  assert.doesNotMatch(html, /<video|\.mp4/i);
+  assert.equal(
+    (await readFile(new URL("../docs/CNAME", import.meta.url), "utf8")).trim(),
+    "www.deliriumdownloads.com",
+  );
+  await Promise.all([
+    access(new URL("../docs/.nojekyll", import.meta.url)),
+    access(new URL("../docs/downloads/medicines-and-delirium.pdf", import.meta.url)),
+    access(new URL("../docs/downloads/medicines-and-delirium.docx", import.meta.url)),
+  ]);
+});

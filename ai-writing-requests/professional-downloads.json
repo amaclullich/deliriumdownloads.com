@@ -1,0 +1,16 @@
+{
+  "request_id": "deliriumdownloads-professional-v1",
+  "request_text": "DRAFT\nGenre: clinical_manual\nSub-register: procedural_section\nAudience: doctors, nurses, allied health professionals and service managers\nPurpose: create a batch of concise printable delirium practice sheets and service checklists\nDestination: deliriumdownloads.com\nStakes: clinical safety, publication, institutional\nRecipe: Full\nSpecialist scope: full editorial\nUse only supplied source material and verified current authorities. Preserve clinical uncertainty and do not invent a recommendation, dose, threshold, quotation or citation.",
+  "working_folder": ".",
+  "intent": "draft",
+  "genre": "clinical_manual",
+  "sub_register": "procedural_section",
+  "recipe": "full",
+  "specialist_scope": "full_editorial",
+  "supplied_text_unit": "none",
+  "target_output_unit": "batch",
+  "stakes": ["clinical_safety", "publication", "institutional"],
+  "book2_calibration": "NOT_APPLICABLE",
+  "selected_voice_exemplar_ids": ["clinical_exemplar_1"],
+  "optional_resources": []
+}

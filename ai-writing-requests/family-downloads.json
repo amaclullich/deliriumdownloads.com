@@ -1,0 +1,16 @@
+{
+  "request_id": "deliriumdownloads-family-v1",
+  "request_text": "DRAFT\nGenre: deliriumsupport.com\nSub-register: download_leaflet\nAudience: patients, families and carers\nPurpose: create a batch of short printable delirium information sheets\nDestination: deliriumdownloads.com\nStakes: clinical safety, publication\nRecipe: Full\nSpecialist scope: full editorial\nUse only supplied source material and verified current authorities. Preserve clinical meaning. Do not invent a recommendation, dose, threshold, quotation or citation.",
+  "working_folder": ".",
+  "intent": "draft",
+  "genre": "website_support",
+  "sub_register": "download_leaflet",
+  "recipe": "full",
+  "specialist_scope": "full_editorial",
+  "supplied_text_unit": "none",
+  "target_output_unit": "batch",
+  "stakes": ["clinical_safety", "publication"],
+  "book2_calibration": "NOT_APPLICABLE",
+  "selected_voice_exemplar_ids": ["deliriumsupport_site_canon"],
+  "optional_resources": []
+}

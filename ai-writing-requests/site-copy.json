@@ -1,0 +1,16 @@
+{
+  "request_id": "deliriumdownloads-site-v1",
+  "request_text": "DRAFT\nGenre: deliriumsupport.com\nSub-register: site_page\nAudience: patients, families, clinicians, nurses and service managers\nPurpose: a clear static download library for delirium information\nDestination: deliriumdownloads.com\nStakes: clinical safety, publication\nRecipe: Full\nSpecialist scope: full editorial\nUse only supplied source material and verified current authorities. Make audience and information limits explicit.",
+  "working_folder": ".",
+  "intent": "draft",
+  "genre": "website_support",
+  "sub_register": "site_page",
+  "recipe": "full",
+  "specialist_scope": "full_editorial",
+  "supplied_text_unit": "none",
+  "target_output_unit": "long_section",
+  "stakes": ["clinical_safety", "publication"],
+  "book2_calibration": "NOT_APPLICABLE",
+  "selected_voice_exemplar_ids": ["deliriumsupport_site_canon"],
+  "optional_resources": []
+}
