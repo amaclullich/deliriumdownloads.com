@@ -41,7 +41,7 @@ A trained healthcare professional should assess the person, look for possible ca
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 - [NHS inform: Delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Delirium recommendations](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## 2. Signs to notice and when to act
 
@@ -83,11 +83,11 @@ Relatives and close friends often notice first that something is different. Thin
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 - [NHS inform: Signs and symptoms of delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Indicators of delirium](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## 3. Finding the possible triggers of delirium
 
-**Purpose:** To explain why clinicians look broadly for one or more causes, and how families can help.
+**Purpose:** To explain why the team looks for one or more causes, and how families can help.
 
 **Status:** Draft for human clinical review. Not yet approved for publication.
 
@@ -95,22 +95,22 @@ Relatives and close friends often notice first that something is different. Thin
 
 There may be one cause or several causes acting together. A proper assessment considers the whole person. No single test tells the whole story.
 
-### Possible triggers and contributors
+### Possible causes and contributing problems
 
-- A new illness or infection, low oxygen or a disturbance in blood sugar or body chemistry
+- A new illness or infection, low oxygen, or a problem with blood sugar or body salts
 - Pain, injury, an operation, constipation or difficulty passing urine
 - Dehydration, poor food intake or another nutritional problem
 - A medicine that has been started, stopped or changed, or withdrawal from alcohol or another substance
 - Reduced mobility, disturbed sleep, an unfamiliar environment, or difficulty seeing or hearing
 
-This list is not complete. The right investigations depend on the person's symptoms, history and examination.
+This list is not complete. The right tests depend on the person's symptoms, medical history and what the clinician finds.
 
 ### Information families can provide
 
 - What the person is normally like and exactly what has changed
 - When the change was first noticed and whether it comes and goes
 - Recent illness, falls, pain, procedures or changes in eating, drinking, bowels or passing urine
-- A complete medicines list, including recent changes and non-prescription products
+- A complete medicines list, including recent changes and medicines bought without a prescription
 - Use of alcohol or other substances, and any glasses, hearing aids or dentures normally used
 
 ### What to ask the clinical team
@@ -129,21 +129,21 @@ This list is not complete. The right investigations depend on the person's sympt
 - [NHS: Causes of sudden confusion](https://www.nhs.uk/symptoms/confusion/)
 - [NHS inform: Causes and treatment of delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Treating delirium](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## 4. How delirium is treated
 
-**Purpose:** To describe the combined approach used to treat causes, support the person and reduce further stress on the brain.
+**Purpose:** To explain how care treats causes, supports the person and reduces further stress on the brain.
 
 **Status:** Draft for human clinical review. Not yet approved for publication.
 
 ### There is no single treatment plan
 
-Care should be tailored to the person. The clinical team should identify and manage the likely cause or combination of causes, then review the person's response.
+Care should be chosen for each person. The clinical team should find and treat the likely cause or causes, then review how the person responds.
 
 ### Treat possible causes
 
-Depending on the assessment, care may include treating an illness, correcting low oxygen or another body disturbance, relieving pain, managing constipation or difficulty passing urine, and reviewing medicines. Tests and treatments should be chosen for the individual rather than applied automatically.
+Care may include treating an illness, correcting low oxygen or another problem in the body, relieving pain, managing constipation or difficulty passing urine, and reviewing medicines. Tests and treatments should fit the person, rather than being the same for everyone.
 
 ### Support the body and brain
 
@@ -160,7 +160,7 @@ Staff and family can explain where the person is and what is happening, using ca
 ### Questions families can ask
 
 - What causes are being treated or still investigated?
-- What is the plan for pain, fluids, nutrition, mobility, sleep and sensory aids?
+- What is the plan for pain, fluids, food, movement, sleep, glasses and hearing aids?
 - How can family members help safely?
 - Has delirium been recorded and communicated to the wider care team?
 
@@ -173,7 +173,7 @@ Staff and family can explain where the person is and what is happening, using ca
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 - [NHS inform: Treatment and recovery from delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Treating delirium](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## 5. Helping to prevent delirium
 
@@ -217,7 +217,7 @@ Tell staff what the person is normally like, what helps them communicate, and wh
 ### Verified sources
 
 - [NICE CG103: Preventing delirium](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 - [NHS inform: Delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 
@@ -264,12 +264,12 @@ Delirium can be upsetting for families. Take breaks, share visits where possible
 
 - [NHS inform: Supporting someone with delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Communication, reorientation and family involvement](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 - [NHS: What to do while waiting for help](https://www.nhs.uk/symptoms/confusion/)
 
 ## 7. Delirium and dementia: understanding the difference
 
-**Purpose:** To explain the typical patterns while making clear that delirium and dementia can occur together.
+**Purpose:** To explain the usual patterns and make clear that a person can have both delirium and dementia.
 
 **Status:** Draft for human clinical review. Not yet approved for publication.
 
@@ -278,11 +278,11 @@ Delirium can be upsetting for families. Take breaks, share visits where possible
 - It develops over hours or days.
 - Attention and awareness are often affected.
 - Alertness may be unusually high or low.
-- Symptoms can fluctuate, sometimes changing noticeably within the same day.
+- Symptoms can come and go, with clear changes during the same day.
 
 ### Dementia usually develops more gradually
 
-Dementia is a long-term condition that affects memory and other thinking abilities. Its usual pattern is more gradual than delirium. However, symptoms and diagnoses vary, so this distinction cannot be made safely from a checklist alone.
+Dementia is a long-term condition that affects memory and thinking. It usually develops more slowly than delirium. However, people vary, so a checklist alone cannot safely tell the two apart.
 
 ### A person can have both
 
@@ -304,7 +304,7 @@ Someone living with dementia can also develop delirium. The important clue is a 
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 - [NHS inform: Delirium and dementia](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Distinguishing delirium from dementia](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## 8. What to say to staff when you are worried about delirium
 
@@ -347,26 +347,26 @@ Repeat the new changes clearly and ask to speak to the responsible nurse or clin
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 - [NHS inform: Delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Assessment, diagnosis and information](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## 9. After delirium: preparing for recovery and follow-up
 
-**Purpose:** To help patients and families know what to ask, what support may be useful and when a new change is urgent.
+**Purpose:** To help patients and families know what to ask, what may help and when a new change is urgent.
 
 **Status:** Draft for human clinical review. Not yet approved for publication.
 
 ### Recovery is individual
 
-The pattern of recovery varies. Some people have gaps in memory or remember frightening experiences. Concentration, sleep, mood, confidence, appetite, mobility or ability to manage everyday tasks may also be affected. Avoid setting a fixed recovery timetable.
+Recovery is different for each person. Some people have gaps in memory or remember frightening experiences. Attention, sleep, mood, confidence, appetite, movement or everyday tasks may also be affected. Do not expect recovery to follow a fixed timetable.
 
 ### Before leaving hospital or care
 
 Ask for:
 
 - A clear explanation of the likely causes, treatment given and any unresolved questions
-- Confirmation that delirium is included in the clinical record and discharge information
+- Confirmation that delirium is written in the clinical record and discharge information
 - An up-to-date medicines list and explanation of any changes
-- A plan for follow-up, rehabilitation, mobility, nutrition or other support
+- A plan for follow-up and help with strength, movement, food, drink or everyday tasks
 - A contact point for questions or continuing concerns
 
 ### Supporting recovery at home
@@ -383,7 +383,7 @@ If the person wants to talk, listen without forcing them to remember. Acknowledg
 
 ### When to ask for help
 
-Contact the GP or relevant healthcare team about continuing or worsening concerns that are not sudden. Ask who will review thinking and memory, mood, sleep, mobility or daily function if these remain affected.
+Contact the GP or relevant healthcare team about concerns that continue or get worse but are not sudden. Ask who will review thinking and memory, mood, sleep, movement or daily tasks if these remain affected.
 
 > **Urgent action**
 >
@@ -393,7 +393,7 @@ Contact the GP or relevant healthcare team about continuing or worsening concern
 
 - [NHS inform: Treatment and recovery from delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Information, support and documentation](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 - [NHS: Sudden confusion (delirium)](https://www.nhs.uk/symptoms/confusion/)
 
 ## 10. Frightening beliefs and hallucinations during delirium
@@ -435,7 +435,7 @@ Describe what the person is seeing, hearing or believing; when it began; what se
 - [NHS inform: Symptoms and support for delirium](https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium)
 - [NICE CG103: Distress, communication and de-escalation](https://www.nice.org.uk/guidance/cg103/chapter/Recommendations)
 - [NHS: What to do while waiting for help](https://www.nhs.uk/symptoms/confusion/)
-- [SIGN 157: Risk reduction and management of delirium](https://www.sign.ac.uk/assets/sign157.pdf)
+- [SIGN 157: Risk reduction and management of delirium](https://rightdecisions.scot.nhs.uk/media/1728/sign-guidelines-delirium.pdf)
 
 ## Publication control note
 

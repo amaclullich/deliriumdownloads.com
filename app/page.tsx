@@ -15,21 +15,67 @@ export default function Home() {
   );
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Delirium Downloads",
-    url: "https://www.deliriumdownloads.com/",
-    description:
-      "Free, printable delirium resources for health and care staff, including clinical prompts and patient/family handouts.",
-    author: {
-      "@type": "Person",
-      name: "Professor Alasdair MacLullich",
-      url: "https://www.alasdairmaclullich.com/",
-      sameAs: [
-        "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
-        "https://orcid.org/0000-0003-3159-9370",
-        "https://x.com/A_MacLullich",
-      ],
-    },
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.deliriumdownloads.com/#author",
+        name: "Professor Alasdair MacLullich",
+        honorificPrefix: "Professor",
+        jobTitle: "Professor of Geriatric Medicine",
+        url: "https://www.alasdairmaclullich.com/",
+        affiliation: {
+          "@type": "Organization",
+          name: "The University of Edinburgh",
+          url: "https://www.ed.ac.uk/",
+        },
+        sameAs: [
+          "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
+          "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
+          "https://orcid.org/0000-0003-3159-9370",
+          "https://www.alasdairmaclullich.com/",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.deliriumdownloads.com/#website",
+        name: "Delirium Downloads",
+        url: "https://www.deliriumdownloads.com/",
+        description:
+          "Free, printable delirium resources for health and care staff, including clinical prompts and patient/family handouts.",
+        inLanguage: "en-GB",
+        publisher: { "@id": "https://www.deliriumdownloads.com/#author" },
+      },
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://www.deliriumdownloads.com/#resource-library",
+        url: "https://www.deliriumdownloads.com/",
+        name: "Delirium Downloads resource library",
+        headline: "Delirium resources, ready for the next conversation",
+        description:
+          "A clinical-preview library of delirium prompts, teaching resources and patient/family handouts for staff.",
+        inLanguage: "en-GB",
+        isAccessibleForFree: true,
+        dateCreated: "2026-08-07",
+        dateModified: "2026-08-08",
+        lastReviewed: "2026-08-08",
+        author: { "@id": "https://www.deliriumdownloads.com/#author" },
+        publisher: { "@id": "https://www.deliriumdownloads.com/#author" },
+        audience: {
+          "@type": "MedicalAudience",
+          audienceType: "Health and care staff",
+        },
+        about: {
+          "@type": "MedicalCondition",
+          name: "Delirium",
+        },
+        isBasedOn: [
+          "https://www.nice.org.uk/guidance/cg103/chapter/Recommendations",
+          "https://rightdecisions.scot.nhs.uk/risk-reduction-and-management-of-delirium-sign/",
+          "https://www.nhsinform.scot/illnesses-and-conditions/brain-nerves-and-spinal-cord/delirium",
+          "https://www.the4at.com/",
+        ],
+      },
+    ],
   };
 
   return (
@@ -259,22 +305,37 @@ export default function Home() {
           </ol>
         </section>
 
+        <aside className="medical-safety shell" aria-labelledby="medical-safety-title">
+          <div>
+            <p className="eyebrow">Medical safety</p>
+            <h2 id="medical-safety-title">New, sudden confusion needs urgent assessment</h2>
+          </div>
+          <p>
+            These downloads are educational resources, not an emergency service or individual
+            medical advice. In the UK, call 999 or go to A&amp;E for new sudden confusion; do not
+            drive yourself. If the person is already receiving care, alert the responsible staff
+            immediately. Outside the UK, use the local emergency number or emergency service.
+          </p>
+        </aside>
+
         <section className="trust-section" id="standards" aria-labelledby="standards-title">
           <div className="shell trust-grid">
             <div className="author-panel">
               <div className="author-mark" aria-hidden="true">AM</div>
               <div>
-                <p className="eyebrow">Named authorship</p>
+                <p className="eyebrow">Lead author and clinical editor</p>
                 <h2 id="standards-title">Professor Alasdair MacLullich</h2>
                 <p>
                   Professor of Geriatric Medicine, University of Edinburgh;
-                  clinically active in acute geriatric medicine and acute orthogeriatrics.
+                  clinically active in acute geriatric medicine and acute orthogeriatrics,
+                  with a specialist focus on delirium detection, prevention and care.
                 </p>
+                <p className="author-status"><strong>Publication status:</strong> clinical preview awaiting final named human review.</p>
                 <div className="profile-links">
                   <a href="https://www.alasdairmaclullich.com/">Personal website ↗</a>
-                  <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University profile ↗</a>
+                  <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University staff profile ↗</a>
+                  <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research and publications ↗</a>
                   <a href="https://orcid.org/0000-0003-3159-9370">ORCID ↗</a>
-                  <a href="https://x.com/A_MacLullich">X / Twitter ↗</a>
                 </div>
               </div>
             </div>
@@ -285,20 +346,34 @@ export default function Home() {
                 <li><strong>Current sources</strong><span>NICE, SIGN, NHS, NHS Inform, MHRA and the official 4AT.</span></li>
                 <li><strong>Clear scope</strong><span>Designed for staff; UK-focused education, not individual medical advice or a substitute for local guidance.</span></li>
                 <li><strong>Transparent production</strong><span>Drafted from Professor MacLullich&apos;s source collection with AI assistance; human clinical release review is required.</span></li>
+                <li><strong>Version control</strong><span>Every download carries its version, status and source list; material changes trigger fresh review.</span></li>
                 <li><strong>Interests</strong><span>Professor MacLullich led development of the 4AT and reports no financial interest in its uptake.</span></li>
                 <li><strong>Independent</strong><span>No advertising, sponsorship, paywall or tracking.</span></li>
               </ul>
-              <details>
+              <details id="editorial-policy">
                 <summary>Editorial, review and corrections policy</summary>
                 <p>
-                  Version 0.9, prepared 7 August 2026. This preview collection is
+                  Version 0.9 resources and this website were last reviewed and updated
+                  8 August 2026. This preview collection is
                   awaiting final named human clinical review before use in patient
                   care. Sources appear inside every PDF. Corrections can be sent via
-                  the contact page on AlasdairMacLullich.com. The site is independently
+                  <a href="https://www.alasdairmaclullich.com/"> AlasdairMacLullich.com</a>. The site is independently
                   maintained and is not an official University of Edinburgh or NHS website.
                   Word templates may be adapted for non-commercial clinical education after
                   named local review; retain the source list, attribution, version and a clear
                   record of local changes. Adaptation does not imply University or NHS endorsement.
+                </p>
+              </details>
+              <details>
+                <summary>Who, how and why</summary>
+                <p>
+                  <strong>Who:</strong> the collection is authored and clinically edited by
+                  Professor Alasdair MacLullich. <strong>How:</strong> source material was drafted
+                  into concise staff resources with AI assistance, checked against the official
+                  sources listed in each download, and subjected to structured safety and
+                  accessibility review; final named human release review remains outstanding.
+                  <strong>Why:</strong> the resources are provided free of charge to support safer,
+                  clearer delirium conversations, teaching and service improvement.
                 </p>
               </details>
             </div>
@@ -322,13 +397,19 @@ export default function Home() {
         <div className="shell footer-grid">
           <div>
             <a className="wordmark footer-wordmark" href="#top"><span>delirium</span><strong>downloads</strong></a>
-            <p>Free printable delirium information. Version 0.9 · 7 August 2026.</p>
+            <p>Free printable delirium information. Version 0.9 · site updated 8 August 2026.</p>
           </div>
           <div>
             <p><strong>Staff education only.</strong> Not individual diagnosis or treatment.</p>
             <p>Patient or family visitor? <a href="https://www.deliriumsupport.com/">Go to Delirium Support.</a></p>
           </div>
-          <p className="copyright">© 2026 Alasdair MacLullich. Free to download and print; Word templates may be adapted locally under the review terms above.</p>
+          <nav className="footer-links" aria-label="Author and site information">
+            <a href="https://www.alasdairmaclullich.com/">AlasdairMacLullich.com</a>
+            <a href="https://orcid.org/0000-0003-3159-9370">ORCID</a>
+            <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile</a>
+            <a href="#editorial-policy">Editorial and corrections policy</a>
+          </nav>
+          <p className="copyright">© 2026 Alasdair MacLullich. Independently maintained; not an official University of Edinburgh or NHS website. Free to download and print; Word templates may be adapted locally under the review terms above.</p>
         </div>
       </footer>
 

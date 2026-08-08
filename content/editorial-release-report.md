@@ -1,7 +1,7 @@
 # Delirium Downloads editorial and release report
 
 **Version:** 0.9 preview  
-**Prepared:** 7 August 2026  
+**Prepared:** 8 August 2026
 **Release status:** Not approved for patient care or search indexing
 
 ## Audience and product decision
@@ -33,9 +33,10 @@ No video, audio, quiz video or video poster is included.
 ## Simulated multidisciplinary panel
 
 A structured simulated review was carried out from the perspectives of an acute
-physician, geriatrician, ward nurse, allied health professional, service manager
-and medical student. This was an AI-assisted editorial stress test, not an
-external human clinical review.
+physician, geriatrician, ward nurse, healthcare assistant, pharmacist, allied
+health professional, care-home practitioner, service manager, medical student
+and patient/family information editor. This was an AI-assisted editorial stress
+test, not an external human clinical review.
 
 Changes made after that review included:
 
@@ -56,6 +57,11 @@ Changes made after that review included:
   behaviour and full mobile navigation;
 - 12-point patient/family PDF and Word body text, plus corrected title-tab
   spacing and plainer patient-facing language;
+- replacement of a retired SIGN link across all ten patient/family masters,
+  followed by full PDF and Word regeneration;
+- alignment review against the final 8 August Delirium Academy release, the
+  current Book 1 Fable chapters, Book 4 drafts and recent teaching materials,
+  with official guidance retained as the claim authority;
 - a visible preview banner, `noindex`, `nofollow`, `noarchive` and a site-wide
   `robots.txt` block pending named human approval.
 
@@ -81,16 +87,16 @@ AI hospital scenes and unverified/cropped 4AT graphics were excluded.
 - The static export contains all 25 PDF/Word pairs, the current stylesheet,
   search/filter script, custom-domain file and `.nojekyll` marker.
 - Build, lint and automated catalogue/download tests pass.
-- The GitHub Pages deployment passed after final resource revision commit
-  `b3dcfb4`; the live preview,
-  stylesheet and catalogue script return HTTP 200, and all 25 PDF plus all 25
-  Word download routes were checked successfully.
-- `www.deliriumdownloads.com` still resolves to Porkbun parking records. The
-  working review address is therefore the GitHub Pages project URL until the
-  registrar DNS is changed and the custom domain is added in GitHub Pages.
-- The in-app browser could not provide a final screenshot because its
-  admin-enforced security policy could not be verified. That control was not
-  bypassed. Static HTTP responses and document assets were verified directly.
+- The GitHub Pages deployment package contains the reviewed site, current
+  stylesheet and catalogue script, together with all 25 PDF plus all 25 Word
+  download routes. Public-response checks are repeated after each deployment.
+- Porkbun DNS now points the apex and `www` host to GitHub Pages while preserving
+  the existing email-forwarding records. The custom domain is configured in the
+  repository and the public `www` address returns the exported site.
+- Dependency checks passed after compatible security updates. Remaining audit
+  findings are confined to development/build tooling and have no server-side
+  runtime in this static site; they should be revisited when compatible upstream
+  updates are available.
 - PDFs are not yet PDF/UA tagged. The paired Word files are the current
   semantically structured, editable alternatives; tagged PDFs or equivalent
   accessible HTML remain a consideration for full public release.

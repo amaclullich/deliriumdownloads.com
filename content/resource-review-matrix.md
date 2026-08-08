@@ -1,13 +1,15 @@
 # Final simulated panel review by resource
 
-**Date:** 7 August 2026  
-**Scope:** 25 PDF/Word pairs in version 0.9  
+**Date:** 8 August 2026
+**Scope:** 25 PDF/Word pairs in version 0.9
 **Status:** AI-assisted simulated multidisciplinary review; not external human clinical approval
 
 The review combined the perspectives of an acute physician, geriatrician,
-senior nurse, pharmacist, allied health professional, service manager,
-medical student and patient-information editor. Every resource remains subject
-to named human clinical approval.
+senior nurse, healthcare assistant, pharmacist, allied health professional,
+care-home practitioner, service manager, medical student, patient/family
+representative and patient-information editor. Each role tested clinical safety,
+clarity, immediate usefulness, audience fit and foreseeable misuse. Every
+resource remains subject to named human clinical approval.
 
 | # | Resource | Panel decision after revision | Improvement made or issue retained for local review |
 |---:|---|---|---|
@@ -40,6 +42,16 @@ to named human clinical approval.
 ## Cross-collection findings
 
 - No P0 clinical-safety issue was found in the final simulated review.
+- All source links were rechecked on 8 August 2026. A retired SIGN URL used by
+  the ten patient/family sheets returned 404 and was replaced with the current
+  official SIGN 157 document before the downloads were regenerated.
+- The collection was checked for consistency with the final 8 August 2026
+  Delirium Academy release, the current Book 1 Fable chapter set, the Book 4
+  clinical-manual drafts and recent delirium teaching material. Book drafts and
+  teaching slides informed scope and phrasing only; official guidance remained
+  the authority for clinical claims.
+- Patient/family copy was re-read for plain language. Dense recovery and trigger
+  wording was shortened without weakening the emergency or clinical boundaries.
 - Patient/family PDF body text is now 12 point; title-tab collisions were fixed.
 - Every Word alternative uses semantic headings and real list styles and again
   passed the document accessibility audit with zero high-, medium- or
@@ -49,4 +61,3 @@ to named human clinical approval.
   HTML should be considered before full public release.
 - Professional one-page PDFs use compact type and require zoom on a phone.
   Include device and print testing in the named human release review.
-

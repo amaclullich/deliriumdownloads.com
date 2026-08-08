@@ -609,6 +609,20 @@ h1 span {
 .steps-list strong { display: block; font-size: 1.03rem; }
 .steps-list p { margin: 2px 0 0; color: var(--ink-soft); }
 
+.medical-safety {
+  margin-bottom: 90px;
+  padding: 26px 30px;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+  gap: 42px;
+  align-items: center;
+  border: 2px solid var(--line);
+  background: var(--coral-pale);
+  box-shadow: 6px 6px 0 var(--line);
+}
+.medical-safety h2 { margin: 4px 0 0; font-size: clamp(1.8rem, 2.5vw, 2.7rem); }
+.medical-safety > p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+
 .trust-section {
   padding: 90px 0;
   color: white;
@@ -639,6 +653,14 @@ h1 span {
 }
 .author-panel h2 { font-size: clamp(2.2rem, 3vw, 3.5rem); }
 .author-panel p:not(.eyebrow) { color: #d5e2ec; }
+.author-panel .author-status {
+  display: inline-block;
+  margin: 14px 0 0;
+  padding: 7px 10px;
+  border: 1px solid #7890a2;
+  background: #183a55;
+  font-size: 0.82rem;
+}
 .profile-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 24px; }
 .profile-links a { font-size: 0.85rem; font-weight: 800; }
 .standards-panel {
@@ -672,15 +694,17 @@ h1 span {
 .sources-inner div { display: flex; flex-wrap: wrap; gap: 16px; }
 .sources-inner a { font-size: 0.87rem; font-weight: 850; }
 
-.site-footer { padding: 48px 0; background: var(--paper-white); }
+.site-footer { padding: 48px 0; background: var(--paper-white); border-top: 1px solid var(--line); }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   gap: 40px;
 }
 .footer-grid p { margin: 8px 0 0; color: var(--ink-soft); font-size: 0.79rem; }
-.footer-grid .copyright { text-align: right; }
+.footer-links { display: grid; gap: 6px; }
+.footer-links a { width: fit-content; font-size: 0.79rem; font-weight: 800; }
+.footer-grid .copyright { grid-column: 1 / -1; padding-top: 20px; border-top: 1px solid var(--line); }
 
 @media (max-width: 1050px) {
   .resource-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -697,7 +721,7 @@ h1 span {
   .hero { grid-template-columns: 1fr; padding-top: 42px; }
   .hero-art { width: min(520px, 100%); margin-inline: auto; }
   .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .use-section, .trust-grid { grid-template-columns: 1fr; gap: 48px; }
+  .use-section, .trust-grid, .medical-safety { grid-template-columns: 1fr; gap: 48px; }
   .student-grid { grid-template-columns: 1fr; gap: 44px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid .copyright { text-align: left; }
@@ -735,6 +759,7 @@ h1 span {
   .resource-card { min-height: 350px; }
   .resource-actions { grid-template-columns: 1fr 0.72fr 0.86fr; }
   .use-section { padding: 70px 0; }
+  .medical-safety { margin-bottom: 70px; padding: 22px; gap: 18px; }
   .student-section { padding: 66px 0; }
   .student-path li { grid-template-columns: 36px 1fr; }
   .student-path a { grid-column: 2; justify-self: start; }

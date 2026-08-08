@@ -236,7 +236,7 @@ def add_header_footer(document: Document) -> None:
     footer_paragraph = footer.paragraphs[0]
     footer_paragraph.paragraph_format.tab_stops.add_tab_stop(Cm(17.2), WD_TAB_ALIGNMENT.RIGHT)
     left_run = footer_paragraph.add_run(
-        "deliriumdownloads.com · Template v0.9 · 7 August 2026 · Human clinical review required"
+        "deliriumdownloads.com · Template v0.9 · 8 August 2026 · Human clinical review required"
     )
     set_run_font(left_run, size=7.5, color=NAVY_SOFT)
     footer_paragraph.add_run("\t")
