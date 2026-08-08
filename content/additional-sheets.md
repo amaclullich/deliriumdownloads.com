@@ -4,7 +4,7 @@
 
 **Scope:** Concise UK-facing prompts for health and care staff. They support, but do not replace, clinical judgement, current local pathways, medicines guidance or setting-specific escalation procedures.
 
-**Source policy:** The copy below is newly written from the official sources linked under each sheet. Links were checked on 7 August 2026. No medicine doses or universal investigation panels are included.
+**Source policy:** The copy below is newly written from the official sources linked under each sheet. Links were checked on 8 August 2026. No medicine doses or universal investigation panels are included.
 
 ---
 

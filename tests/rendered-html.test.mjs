@@ -27,6 +27,13 @@ test("renders the complete staff-focused resource desk", async () => {
   assert.match(html, /editable Word alternatives/i);
   assert.match(html, /https:\/\/www\.deliriumsupport\.com\//);
   assert.match(html, /HUMAN CLINICAL REVIEW PENDING|human clinical release review is required/i);
+  assert.match(html, /New, sudden confusion needs urgent assessment/i);
+  assert.match(html, /call 999 or go to A&amp;E for new sudden confusion/i);
+  assert.match(html, /MedicalWebPage/);
+  assert.match(html, /https:\/\/orcid\.org\/0000-0003-3159-9370/);
+  assert.match(html, /edwebprofiles\.ed\.ac\.uk\/profile\/alasdair-maclullich/);
+  assert.match(html, /Who, how and why/);
+  assert.match(html, /AI assistance/i);
   assert.match(html, /noindex/i);
   assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
   assert.ok(
@@ -70,7 +77,10 @@ test("ships every listed PDF, paired Word template and the public metadata files
     assert.match(`${page}\n${catalogue}`, new RegExp(slug.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   const robots = await readFile(new URL("../public/robots.txt", import.meta.url), "utf8");
+  const familySources = await readFile(new URL("../content/family-sheets.md", import.meta.url), "utf8");
   assert.match(robots, /Disallow:\s*\//);
+  assert.doesNotMatch(familySources, /www\.sign\.ac\.uk\/assets\/sign157\.pdf/);
+  assert.match(familySources, /rightdecisions\.scot\.nhs\.uk\/media\/1728\/sign-guidelines-delirium\.pdf/);
   assert.match(catalogue, /slug: "after-delirium"[\s\S]*?audience: "families"/);
   assert.match(catalogueScript, /card\.dataset\.search.*card\.dataset\.audience/);
   assert.match(catalogueScript, /search\.value = "";\s*button\.click\(\)/);

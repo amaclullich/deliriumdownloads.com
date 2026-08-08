@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Delirium Downloads | Practical resources for health and care staff",
   description:
     "Free, printable delirium resources for health and care staff, including clinical prompts and handouts for patients and families.",
+  creator: "Professor Alasdair MacLullich",
+  publisher: "Professor Alasdair MacLullich",
+  category: "Health education",
   alternates: { canonical: "/" },
   authors: [{ name: "Professor Alasdair MacLullich", url: "https://www.alasdairmaclullich.com/" }],
   openGraph: {

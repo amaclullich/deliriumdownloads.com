@@ -418,7 +418,7 @@ class SheetDocTemplate(BaseDocTemplate):
         canvas.line(16 * mm, 15 * mm, width - 16 * mm, 15 * mm)
         canvas.setFont("Arial", 6.8)
         canvas.setFillColor(NAVY_SOFT)
-        canvas.drawString(16 * mm, 10.8 * mm, "DELIRIUMDOWNLOADS.COM · DRAFT v0.9 · 7 AUG 2026 · HUMAN CLINICAL REVIEW PENDING")
+        canvas.drawString(16 * mm, 10.8 * mm, "DELIRIUMDOWNLOADS.COM · DRAFT v0.9 · 8 AUG 2026 · HUMAN CLINICAL REVIEW PENDING")
         canvas.drawRightString(width - 16 * mm, 10.8 * mm, f"{doc.page}")
         canvas.restoreState()
 
