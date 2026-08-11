@@ -782,3 +782,63 @@ h1 span {
   .resource-grid { grid-template-columns: repeat(2, 1fr); }
   .resource-card { break-inside: avoid; box-shadow: none; }
 }
+
+.analytics-settings {
+  position: fixed;
+  z-index: 89;
+  right: 14px;
+  bottom: 12px;
+  border: 1.5px solid var(--line);
+  background: var(--paper-white);
+  color: var(--ink);
+  padding: 7px 10px;
+  font-size: .72rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.analytics-consent {
+  position: fixed;
+  z-index: 90;
+  right: 16px;
+  bottom: 52px;
+  width: min(480px, calc(100% - 32px));
+  border: 2px solid var(--line);
+  background: var(--paper-white);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--line);
+  padding: 18px;
+}
+
+.analytics-consent p {
+  margin: 0;
+  font-size: .88rem;
+}
+
+.analytics-consent div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.analytics-consent button {
+  min-height: 42px;
+  border: 1.5px solid var(--line);
+  background: var(--lime);
+  color: var(--ink);
+  padding: 8px 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.analytics-consent button:last-child {
+  background: var(--paper-white);
+}
+
+@media print {
+  .analytics-settings,
+  .analytics-consent {
+    display: none !important;
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AnalyticsConsent from "./analytics-consent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.deliriumdownloads.com"),
@@ -33,7 +34,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB">
-      <body>{children}</body>
+      <body>
+        {children}
+        <AnalyticsConsent />
+      </body>
     </html>
   );
 }

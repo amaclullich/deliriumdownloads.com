@@ -66,6 +66,7 @@ test("ships every listed PDF, paired Word template and the public metadata files
     access(new URL("../public/sitemap.xml", import.meta.url)),
     access(new URL("../public/og-delirium-downloads.png", import.meta.url)),
     access(new URL("../public/catalogue.js", import.meta.url)),
+    access(new URL("../public/google741ed80861af856e.html", import.meta.url)),
   ]);
 
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
@@ -93,6 +94,17 @@ test("does not retain disposable starter UI", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
 
+test("keeps Analytics consent-gated and uses the Downloads measurement ID", async () => {
+  const source = await readFile(new URL("../app/analytics-consent.tsx", import.meta.url), "utf8");
+  const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
+  assert.match(source, /G-5HYLTS8YFT/);
+  assert.match(source, /analytics_storage:\s*"denied"/);
+  assert.match(source, /ad_storage:\s*"denied"/);
+  assert.match(source, /allow_google_signals:\s*false/);
+  assert.match(source, /document\.createElement\("script"\)/);
+  assert.doesNotMatch(html, /<script[^>]+googletagmanager\.com/i);
+});
+
 test("exports a complete noindex GitHub Pages build", async () => {
   const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
   assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
@@ -108,5 +120,6 @@ test("exports a complete noindex GitHub Pages build", async () => {
     access(new URL("../docs/.nojekyll", import.meta.url)),
     access(new URL("../docs/downloads/medicines-and-delirium.pdf", import.meta.url)),
     access(new URL("../docs/downloads/medicines-and-delirium.docx", import.meta.url)),
+    access(new URL("../docs/google741ed80861af856e.html", import.meta.url)),
   ]);
 });
