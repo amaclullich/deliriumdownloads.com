@@ -102,6 +102,8 @@ test("keeps Analytics consent-gated and uses the Downloads measurement ID", asyn
   assert.match(source, /ad_storage:\s*"denied"/);
   assert.match(source, /allow_google_signals:\s*false/);
   assert.match(source, /document\.createElement\("script"\)/);
+  assert.match(source, /dataLayer\.push\(arguments\)/);
+  assert.doesNotMatch(source, /dataLayer\.push\(args\)/);
   assert.doesNotMatch(html, /<script[^>]+googletagmanager\.com/i);
 });
 
