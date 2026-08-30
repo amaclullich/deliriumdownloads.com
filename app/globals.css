@@ -810,6 +810,10 @@ h1 span {
   padding: 18px;
 }
 
+.analytics-consent[hidden] {
+  display: none;
+}
+
 .analytics-consent p {
   margin: 0;
   font-size: .88rem;
