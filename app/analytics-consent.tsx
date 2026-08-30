@@ -39,14 +39,45 @@ function clearAnalyticsCookies() {
   });
 }
 
+function ensureGtag() {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() {
+    // Google processes command tuples stored as Arguments objects.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments);
+  };
+}
+
+function loadAnalytics() {
+  ensureGtag();
+  window.gtag("consent", "update", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+
+  if (!document.querySelector(`script[data-analytics-id="${MEASUREMENT_ID}"]`)) {
+    const script = document.createElement("script");
+    script.async = true;
+    script.dataset.analyticsId = MEASUREMENT_ID;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(MEASUREMENT_ID)}`;
+    document.head.appendChild(script);
+    window.gtag("js", new Date());
+    window.gtag("config", MEASUREMENT_ID, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      cookie_expires: CONSENT_MAX_AGE,
+      page_location: window.location.origin + window.location.pathname,
+    });
+  }
+}
+
 export default function AnalyticsConsent() {
   const [bannerOpen, setBannerOpen] = useState(false);
 
   useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function gtag(...args: unknown[]) {
-      window.dataLayer.push(args);
-    };
+    ensureGtag();
 
     window.gtag("consent", "default", {
       analytics_storage: "denied",
@@ -57,38 +88,16 @@ export default function AnalyticsConsent() {
     });
     window.gtag("set", "ads_data_redaction", true);
 
-    if (readChoice() === "granted") {
+    const choice = readChoice();
+    if (choice === "granted") {
       loadAnalytics();
-    } else if (readChoice() === "denied") {
+    } else if (choice === "denied") {
       clearAnalyticsCookies();
     } else {
-      setBannerOpen(true);
+      const timer = window.setTimeout(() => setBannerOpen(true), 0);
+      return () => window.clearTimeout(timer);
     }
   }, []);
-
-  function loadAnalytics() {
-    window.gtag("consent", "update", {
-      analytics_storage: "granted",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-    });
-
-    if (!document.querySelector(`script[data-analytics-id="${MEASUREMENT_ID}"]`)) {
-      const script = document.createElement("script");
-      script.async = true;
-      script.dataset.analyticsId = MEASUREMENT_ID;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(MEASUREMENT_ID)}`;
-      document.head.appendChild(script);
-      window.gtag("js", new Date());
-      window.gtag("config", MEASUREMENT_ID, {
-        allow_google_signals: false,
-        allow_ad_personalization_signals: false,
-        cookie_expires: CONSENT_MAX_AGE,
-        page_location: window.location.origin + window.location.pathname,
-      });
-    }
-  }
 
   function accept() {
     saveChoice("granted");
