@@ -66,6 +66,7 @@ test("ships every listed PDF, paired Word template and the public metadata files
     access(new URL("../public/sitemap.xml", import.meta.url)),
     access(new URL("../public/og-delirium-downloads.png", import.meta.url)),
     access(new URL("../public/catalogue.js", import.meta.url)),
+    access(new URL("../public/analytics-consent.js", import.meta.url)),
     access(new URL("../public/google741ed80861af856e.html", import.meta.url)),
   ]);
 
@@ -95,7 +96,8 @@ test("does not retain disposable starter UI", async () => {
 });
 
 test("keeps Analytics consent-gated and uses the Downloads measurement ID", async () => {
-  const source = await readFile(new URL("../app/analytics-consent.tsx", import.meta.url), "utf8");
+  const component = await readFile(new URL("../app/analytics-consent.tsx", import.meta.url), "utf8");
+  const source = await readFile(new URL("../public/analytics-consent.js", import.meta.url), "utf8");
   const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
   assert.match(source, /G-5HYLTS8YFT/);
   assert.match(source, /analytics_storage:\s*"denied"/);
@@ -104,6 +106,11 @@ test("keeps Analytics consent-gated and uses the Downloads measurement ID", asyn
   assert.match(source, /document\.createElement\("script"\)/);
   assert.match(source, /dataLayer\.push\(arguments\)/);
   assert.doesNotMatch(source, /dataLayer\.push\(args\)/);
+  assert.match(component, /id="analytics-consent"/);
+  assert.match(component, /<script src="\.\/analytics-consent\.js" defer/);
+  assert.match(html, /<section[^>]+class="analytics-consent"[^>]+hidden/);
+  assert.match(html, /<section[^>]+id="analytics-consent"/);
+  assert.match(html, /<script src="\.\/analytics-consent\.js" defer/);
   assert.doesNotMatch(html, /<script[^>]+googletagmanager\.com/i);
 });
 
