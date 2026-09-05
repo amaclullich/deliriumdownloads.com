@@ -52,8 +52,8 @@ for (const disposable of [".assetsignore", "_headers", "vinext-client-entry-mani
 }
 
 const robots = await readFile(path.join(outputDir, "robots.txt"), "utf8");
-if (!/Disallow:\s*\//.test(robots) || !/noindex/i.test(html)) {
-  throw new Error("Preview export must remain noindex until named human clinical approval");
+if (/Disallow:\s*\//.test(robots) || /noindex/i.test(html) || !robots.includes("Sitemap: https://www.deliriumdownloads.com/sitemap.xml")) {
+  throw new Error("Public export must permit indexing and advertise the canonical sitemap");
 }
 
 console.log(`Static GitHub Pages export written to ${outputDir}`);

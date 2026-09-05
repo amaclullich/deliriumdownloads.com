@@ -37,14 +37,12 @@ Master copy is under `content/`; generation and visual-QA helpers are under
 `scripts/`. PDFs and Word templates are mirrored to `public/downloads/`. The
 complete GitHub Pages build is generated in `docs/`.
 
-The GitHub Actions deployment is enabled and verified. The custom domain is not
-connected until its registrar DNS is changed from the Porkbun parking records;
-keep the GitHub preview URL as the working review address until then.
+The live site is https://www.deliriumdownloads.com/ and is deployed through GitHub Pages from `docs/`.
 
-## Publication gate
+## Public discovery status
 
-The preview remains `noindex` and `robots.txt` disallows crawling. Do not remove
-that gate until a named appropriately qualified clinician has reviewed the
-whole collection and the reviewer, approval date and next review date have been
-recorded. After approval, update the version/date consistently in the site,
-PDFs and Word templates before enabling indexing.
+On 5 September 2026 Professor Alasdair MacLullich instructed publication and inclusion in analytics, search platforms and Looker. The site now permits crawling and indexing and advertises its canonical sitemap.
+
+This publication instruction does not itself document completion of the clinical review. Existing version 0.9 clinical-review notices and the PDF/Word resources are preserved without asserting a reviewer or approval date. Public search discovery and clinical approval are separate statuses.
+
+Analytics remains consent-gated under the existing measurement ID. See the publication report for live verification and platform status.

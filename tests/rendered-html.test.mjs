@@ -34,7 +34,7 @@ test("renders the complete staff-focused resource desk", async () => {
   assert.match(html, /edwebprofiles\.ed\.ac\.uk\/profile\/alasdair-maclullich/);
   assert.match(html, /Who, how and why/);
   assert.match(html, /AI assistance/i);
-  assert.match(html, /noindex/i);
+  assert.doesNotMatch(html, /noindex/i);
   assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
   assert.ok(
     html.indexOf("Recognising delirium at the bedside") < html.indexOf("What is delirium?"),
@@ -80,7 +80,8 @@ test("ships every listed PDF, paired Word template and the public metadata files
   }
   const robots = await readFile(new URL("../public/robots.txt", import.meta.url), "utf8");
   const familySources = await readFile(new URL("../content/family-sheets.md", import.meta.url), "utf8");
-  assert.match(robots, /Disallow:\s*\//);
+  assert.doesNotMatch(robots, /Disallow:\s*\//);
+  assert.match(robots, /Sitemap: https:\/\/www\.deliriumdownloads\.com\/sitemap\.xml/);
   assert.doesNotMatch(familySources, /www\.sign\.ac\.uk\/assets\/sign157\.pdf/);
   assert.match(familySources, /rightdecisions\.scot\.nhs\.uk\/media\/1728\/sign-guidelines-delirium\.pdf/);
   assert.match(catalogue, /slug: "after-delirium"[\s\S]*?audience: "families"/);
@@ -114,10 +115,11 @@ test("keeps Analytics consent-gated and uses the Downloads measurement ID", asyn
   assert.doesNotMatch(html, /<script[^>]+googletagmanager\.com/i);
 });
 
-test("exports a complete noindex GitHub Pages build", async () => {
+test("exports a complete indexable GitHub Pages build", async () => {
   const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
   assert.equal((html.match(/class="resource-card/g) ?? []).length, 25);
-  assert.match(html, /meta name="robots" content="noindex, nofollow, noarchive"/);
+  assert.match(html, /meta name="robots" content="index, follow"/);
+  assert.match(html, /name="msvalidate.01" content="1ABA82F102DF1190DEEBABCE5577DBB4"/);
   assert.doesNotMatch(html, /<video|\.mp4/i);
   assert.doesNotMatch(html, /(?:href|src)="\/(?:_next|downloads|catalogue)/);
   assert.doesNotMatch(html, /\\"href\\":\\"\/downloads\//);

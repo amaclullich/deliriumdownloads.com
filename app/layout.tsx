@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     images: ["/og-delirium-downloads.png"],
     creator: "@A_MacLullich",
   },
-  robots: { index: false, follow: false, noarchive: true },
+  robots: { index: true, follow: true },
+  other: { "msvalidate.01": "1ABA82F102DF1190DEEBABCE5577DBB4" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
