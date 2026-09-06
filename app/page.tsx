@@ -393,6 +393,12 @@ export default function Home() {
         </section>
       </main>
 
+      <aside className="newsletter-invitation shell" aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">More from Alasdair MacLullich</h2>
+        <p>Free articles on delirium, dementia and better care, for patients, families and healthcare professionals. Usually one email a week, with occasional book and resource news.</p>
+        <a href="https://alasdairmaclullich.substack.com/subscribe">Subscribe free on Substack</a>
+      </aside>
+
       <footer className="site-footer">
         <div className="shell footer-grid">
           <div>
