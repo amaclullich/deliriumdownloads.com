@@ -96,12 +96,13 @@ test("does not retain disposable starter UI", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
 
-test("keeps Analytics consent-gated and uses the Downloads measurement ID", async () => {
+test("keeps limited Analytics on by default with a saved opt-out and uses the Downloads measurement ID", async () => {
   const component = await readFile(new URL("../app/analytics-consent.tsx", import.meta.url), "utf8");
   const source = await readFile(new URL("../public/analytics-consent.js", import.meta.url), "utf8");
   const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
   assert.match(source, /G-5HYLTS8YFT/);
-  assert.match(source, /analytics_storage:\s*"denied"/);
+  assert.match(source, /analytics_storage:\s*choice === "denied" \? "denied" : "granted"/);
+  assert.match(source, /if \(choice === "denied"\) \{[\s\S]*?\} else \{\s*loadAnalytics\(\);\s*if \(choice === null\) setPanelOpen\(true\);/);
   assert.match(source, /ad_storage:\s*"denied"/);
   assert.match(source, /allow_google_signals:\s*false/);
   assert.match(source, /document\.createElement\("script"\)/);
@@ -111,6 +112,8 @@ test("keeps Analytics consent-gated and uses the Downloads measurement ID", asyn
   assert.match(component, /<script src="\.\/analytics-consent\.js" defer/);
   assert.match(html, /<section[^>]+class="analytics-consent"[^>]+hidden/);
   assert.match(html, /<section[^>]+id="analytics-consent"/);
+  assert.match(html, /Analytics is on\./);
+  assert.match(html, /Turn analytics off/);
   assert.match(html, /<script src="\.\/analytics-consent\.js" defer/);
   assert.doesNotMatch(html, /<script[^>]+googletagmanager\.com/i);
 });
