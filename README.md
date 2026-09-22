@@ -45,4 +45,4 @@ On 5 September 2026 Professor Alasdair MacLullich instructed publication and inc
 
 This publication instruction does not itself document completion of the clinical review. Existing version 0.9 clinical-review notices and the PDF/Word resources are preserved without asserting a reviewer or approval date. Public search discovery and clinical approval are separate statuses.
 
-Analytics remains consent-gated under the existing measurement ID. See the publication report for live verification and platform status.
+Limited analytics is on by default under the existing measurement ID, relying on the UK statistical purposes exception (PECR as amended by the Data (Use and Access) Act 2025); a first-visit notice and the Analytics settings button let visitors turn it off, and a saved choice to turn it off is honoured. See the publication report for live verification and platform status.
