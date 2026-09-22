@@ -43,12 +43,31 @@
   }
 
   function setPanelOpen(open, focusChoice = false) {
+    if (open) {
+      const isOff = readChoice() === "denied";
+      const state = consentPanel.querySelector("strong");
+      if (state) state.textContent = isOff ? "Analytics is off." : "Analytics is on.";
+      allowButton.textContent = isOff ? "Turn analytics on" : "Keep analytics on";
+      declineButton.textContent = isOff ? "Keep analytics off" : "Turn analytics off";
+    }
     consentPanel.hidden = !open;
     settingsButton.setAttribute("aria-expanded", String(open));
     if (open && focusChoice) allowButton.focus();
   }
 
+  // Keep campaign tags (utm_ parameters); drop every other query string.
+  function pageLocation() {
+    const kept = [];
+    new URLSearchParams(window.location.search).forEach((value, key) => {
+      if (/^utm_(?:source|medium|campaign|term|content|id)$/.test(key)) {
+        kept.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`);
+      }
+    });
+    return window.location.origin + window.location.pathname + (kept.length ? `?${kept.join("&")}` : "");
+  }
+
   function loadAnalytics() {
+    window[`ga-disable-${measurementId}`] = false;
     ensureGtag();
     window.gtag("consent", "update", {
       analytics_storage: "granted",
@@ -68,18 +87,19 @@
         allow_google_signals: false,
         allow_ad_personalization_signals: false,
         cookie_expires: consentMaxAge,
-        page_location: window.location.origin + window.location.pathname,
+        page_location: pageLocation(),
       });
     }
   }
 
+  const choice = readChoice();
+
   ensureGtag();
   window.gtag("consent", "default", {
-    analytics_storage: "denied",
+    analytics_storage: choice === "denied" ? "denied" : "granted",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
-    wait_for_update: 500,
   });
   window.gtag("set", "ads_data_redaction", true);
 
@@ -90,6 +110,8 @@
     setPanelOpen(false);
   });
   declineButton.addEventListener("click", () => {
+    const wasLoaded = Boolean(document.querySelector(`script[data-analytics-id="${measurementId}"]`));
+    window[`ga-disable-${measurementId}`] = true;
     saveChoice("denied");
     window.gtag("consent", "update", {
       analytics_storage: "denied",
@@ -99,10 +121,17 @@
     });
     clearAnalyticsCookies();
     setPanelOpen(false);
+    if (wasLoaded) window.location.reload();
   });
 
-  const choice = readChoice();
-  if (choice === "granted") loadAnalytics();
-  else if (choice === "denied") clearAnalyticsCookies();
-  else setPanelOpen(true);
+  // Limited analytics is on by default under the UK statistical purposes
+  // exception (PECR as amended by the Data (Use and Access) Act 2025).
+  // A saved "denied" choice is honoured; a first visit shows the notice.
+  if (choice === "denied") {
+    window[`ga-disable-${measurementId}`] = true;
+    clearAnalyticsCookies();
+  } else {
+    loadAnalytics();
+    if (choice === null) setPanelOpen(true);
+  }
 })();
