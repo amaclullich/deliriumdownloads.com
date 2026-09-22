@@ -17,11 +17,11 @@ export default function AnalyticsConsent() {
         id="analytics-consent"
       >
         <p>
-          <strong>May this site count your visit?</strong> Optional, privacy-limited Google Analytics helps show which resources are useful. Advertising features stay off.
+          <strong>Analytics is on.</strong> We use limited Google Analytics to see which resources are useful. It is not used for advertising or Google Signals. Google receives information such as pages viewed, approximate location, browser or device type and referring website. You can turn analytics off now or at any time.
         </p>
         <div>
-          <button id="analytics-allow" type="button">Allow analytics</button>
-          <button id="analytics-decline" type="button">No, thank you</button>
+          <button id="analytics-allow" type="button">Keep analytics on</button>
+          <button id="analytics-decline" type="button">Turn analytics off</button>
         </div>
       </section>
       <script src="./analytics-consent.js" defer />
