@@ -348,7 +348,7 @@ export default function Home() {
                 <li><strong>Transparent production</strong><span>Drafted from Professor MacLullich&apos;s source collection with AI assistance; human clinical release review is required.</span></li>
                 <li><strong>Version control</strong><span>Every download carries its version, status and source list; material changes trigger fresh review.</span></li>
                 <li><strong>Interests</strong><span>Professor MacLullich led development of the 4AT and reports no financial interest in its uptake.</span></li>
-                <li><strong>Independent</strong><span>No advertising, sponsorship or paywall; optional analytics only with consent.</span></li>
+                <li><strong>Independent</strong><span>No advertising, sponsorship or paywall; limited analytics that visitors can turn off.</span></li>
               </ul>
               <details id="editorial-policy">
                 <summary>Editorial, review and corrections policy</summary>
